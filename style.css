@@ -26,8 +26,9 @@ body {
 }
 .button-content:hover i {
     display: inline;
-    opacity: 0;
-    animation: fadeIn 0.7s ease-in-out;
+    animation: fadeIn 0.7s ease-in-out forwards; /* Add 'forwards' to maintain the final state */
+    opacity: 1; /* Ensure opacity is set to 1 */
+
     
     
 }
