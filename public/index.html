@@ -1,0 +1,113 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Noches Pixelwar
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+ </head>
+  <body class="bg-black text-white flex items-center justify-center min-h-screen">
+  <div id="particles-container"></div>
+
+  <div class="text-center">
+   <div class="mb-8">
+    <img id="heroimg" class="mx-auto" height="100%" src="https://media.discordapp.net/attachments/1354436828748320820/1354436852416909382/herologo.png?ex=67e5491d&is=67e3f79d&hm=15d1a1669b8bcbd4f1ed227121fb2c7bfcad6fd968b0e2947671887d51feed9c&=&format=webp&quality=lossless" width="100%"/>
+   </div>
+   <div class="space-y-4">
+    <button class="bg-white text-black py-2 px-8 rounded-full text-xl font-bold flex items-center justify-center mx-auto">
+     <div class="button-content">
+      <i class="fas fa-arrow-left">
+      </i>
+      <span>
+       PLAY
+      </span>
+      <i class="fas fa-arrow-right">
+      </i>
+     </div>
+    </button>
+    <button class="bg-white text-black py-2 px-8 rounded-full text-xl font-bold flex items-center justify-center mx-auto">
+     <div class="button-content">
+      <i class="fas fa-arrow-left">
+      </i>
+      <span>
+       CHARACTERS
+      </span>
+      <i class="fas fa-arrow-right">
+      </i>
+     </div>
+    </button>
+    <button class="bg-white text-black py-2 px-8 rounded-full text-xl font-bold flex items-center justify-center mx-auto">
+     <div class="button-content">
+      <i class="fas fa-arrow-left">
+      </i>
+      <span>
+       SETTINGS
+      </span>
+      <i class="fas fa-arrow-right">
+      </i>
+     </div>
+    </button>
+   </div>
+  </div>
+  <script>
+    const particlesContainer = document.getElementById('particles-container'); 
+    particlesContainer.style.pointerEvents = 'none'; // Ensure pointer events are disabled
+
+    console.log("Particles container initialized"); // Debugging line
+
+    const particleCount = 100;
+
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.position = 'absolute';
+      particle.style.backgroundColor = 'red';
+
+      particle.style.borderRadius = '50%';
+      particle.style.width = '5px';
+      particle.style.height = '5px';
+      particle.style.opacity = Math.random();
+      particle.style.left = Math.random() * window.innerWidth + 'px';
+      particle.style.bottom = '0px';
+      particlesContainer.appendChild(particle);
+
+      animateParticle(particle);
+    }
+
+    function animateParticle(particle) {
+      const animationDuration = Math.random() * 3 + 2; // 2 to 5 seconds
+      particle.animate([
+        { transform: 'translateY(0)' },
+        { transform: 'translateY(-100vh)' }
+      ], {
+        duration: animationDuration * 1000,
+        easing: 'linear',
+        iterations: Infinity
+      });
+    }
+  </script>
+  <style>
+    #particles-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      opacity: 0.7;
+    }
+  </style>
+ </body>
+</html>
