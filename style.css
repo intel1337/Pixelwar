@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+body {
+    font-family: "Cinzel", serif;
+}
+.button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* space-x-2; */
+
+}
+.button-content i {
+    display: none;
+}
+.button-content:hover i {
+    display: inline;
+    
+    
+}
+#heroimg {
+    transition: 1s;
+    margin-top: 5%;
+}
+
+#heroimg:hover {
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.9));
+    filter: drop-shadow(0px 0px 15px rgba(255, 0, 0, 0.9));
+    margin-bottom: 5%;
+    
+    
+    
+}
+
+body button{
+    transition: 0.7s;
+}
+
+body button:hover{
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.9));
+    filter: drop-shadow(0px 0px 15px rgba(255, 0, 0, 0.9));
+}
